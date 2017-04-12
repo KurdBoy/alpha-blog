@@ -45,7 +45,7 @@ end
 
 group :production do
 
-	gem 'pg'
+	gem 'pg' #heroku use postgres database
 	gem 'rails_12factor'
 
 end
