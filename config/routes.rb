@@ -1,4 +1,10 @@
 AlphaBlog::Application.routes.draw do
+
+  root :to => 'pages#home'
+	get 'about', to: 'pages#about'
+
+	resources :articles
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -50,8 +56,6 @@ AlphaBlog::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
 
-  root :to => 'pages#home'
-	get 'about', to: 'pages#about'
 
 	#get 'pages/home', to: 'pages#home'
 	#get 'pages/about', to: 'pages#about'
