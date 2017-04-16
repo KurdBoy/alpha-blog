@@ -1,7 +1,14 @@
 <h1> Create an article </h1>
+
+  <% if @article.errors.any? %>
+    <h3> errors:_</h3> <br/>
+		<% @article.errors.full_messages.each do |msg| %>
+		  <li> <%= msg %> </li>
+		<% end %>
+  <% end %>
   <%= form_for @article do |f| %>
     <p>
-      <%= f.label :title %><br/>
+      <%= f.label :title %> <br/>
       <%= f.text_field :title %>
     </p>
 
